@@ -3,9 +3,9 @@ import cv2
 font = cv2.FONT_HERSHEY_SIMPLEX
 
 cap = cv2.VideoCapture(0)
-#frame = cv2.imread("C:\\Users\\Rakesh\\Desktop\\DSC_0723.jpg")
+
 ret,frame=cap.read()
-#cv2.imshow('frame2',frame)
+
 #select Object of Interest
 r = cv2.selectROI(frame)
 crop=frame[int(r[1]):int(r[1]+r[3]),int(r[0]):int(r[0]+r[2])]
@@ -39,6 +39,7 @@ while(1):
         xc=(int)(x+w/2)
         yc=(int)(y+h/2)
         cv2.circle(img2,(xc,yc), 5, (0,255,0), -1)
+        #assumed frame size 640 X 480
         dy=480-yc
         dx=640-xc
         cv2.putText(img2,('dx='+str(dx)),(10,400), font, 1,(0,0,255),1,cv2.LINE_AA)
