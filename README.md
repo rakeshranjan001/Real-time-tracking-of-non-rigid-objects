@@ -1,6 +1,11 @@
 # Real-time-tracking-of-non-rigid-objects
-To track non-rigid objects in a video sequence and keeping the object at the center of the frame by controlling the movement of the camera.
-Implemented the mean shift algorithm to track non rigid objects in a video sequence.
+Used the hog descriptor for feature extraction from the ROI
 
-#uses CV2
+Used mean shift algorithm to track the object of interest in a video sequence .
+
+# Arduino
+
+Further used arduino to control the movement of the camera attached on a servo motor to follow the object . Aiming to keep the object at the centre of the frame.
+
+
 
